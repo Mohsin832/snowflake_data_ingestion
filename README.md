@@ -21,7 +21,7 @@ Data ingestion is the process of collecting raw data from various sources and mo
 
 The diagram below compares three ways to connect AWS S3 to Snowflake for loading data into a target table.
 
-![Snowflake S3 ingestion methods: access keys vs S3 integration (manual) vs S3 integration with Snowpipe](./snowflake-ingestion-methods.png)
+![Snowflake S3 ingestion methods: access keys vs S3 integration (manual) vs S3 integration with Snowpipe](./image.png)
 
 - **Method 1 — Directly using Access Keys and Secret Access Key**
   An IAM user with an attached policy grants an AWS-S3 access key and secret access key. These credentials are used directly in a Snowflake stage (`SF-Stage`), which then loads data via `COPY INTO` the target table.

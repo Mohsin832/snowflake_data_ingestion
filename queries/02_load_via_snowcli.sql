@@ -2,6 +2,9 @@
 -- Loading data using SnowCLI
 --===================================
 
+-- first use the warehouse or create it
+use warehouse data_ingestion_wh
+
 -- login snowsql
 -- snowsql
 
@@ -16,13 +19,13 @@ CREATE OR REPLACE STAGE SNOW_CLI_STAGE
 	file_format = FILE_FORMAT_CLI;
 
 DESC STAGE SNOW_CLI_STAGE;
-
+	
 -- snowsql -a <account_identifier> -u <username>
 -- snowsql -a  -u AYANSMIT
 -- enter your password
 
 -- put data into stage
-PUT 'file:///E:AyanHussain/1 CDE/CDE Repos/snowflake-loading-data/data/customer_detail.csv'
+PUT 'file:///D:/cloud-data-engineering/Muhammad Mohsin/Snowflake/snowflake-data-ingestion/data/customer_detail.csv'
   @SNOW_CLI_STAGE
   AUTO_COMPRESS=TRUE;
 

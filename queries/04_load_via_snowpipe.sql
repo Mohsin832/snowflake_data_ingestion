@@ -39,8 +39,6 @@ CREATE OR REPLACE FILE FORMAT S3_TESLA_STAGE_FORMAT
     FIELD_DELIMITER=','
     SKIP_HEADER=1;
 
-drop
-
 -- Step 6: Create an external stage using file format createbavove
 CREATE or replace STAGE S3_TESLA_STAGE
   STORAGE_INTEGRATION = S3_TESLA_INTEGRATION
